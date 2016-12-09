@@ -14,7 +14,7 @@ data_short <- subset(data, Date == "2/2/2007" | Date == "1/2/2007")
 
 # create the graph and save as png
 
-png("plot1.png")
+png("plot1.png", bg = "transparent")
 hist(data_short$Global_active_power, col = "red", main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)", ylab = "Frequency")
 dev.off()

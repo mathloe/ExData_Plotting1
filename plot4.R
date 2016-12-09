@@ -17,7 +17,7 @@ data_short$DateTime <- paste(data_short$Date, data_short$Time)
 data_short$DateTime <- strptime(data_short$DateTime, "%d/%m/%Y %H:%M:%S")
 
 # create the graph and save as png
-png("plot4.png")
+png("plot4.png", bg = "transparent")
 par(mfcol = c(2,2))
 
 with(data_short, plot(DateTime, Global_active_power, type = "l",

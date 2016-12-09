@@ -17,7 +17,7 @@ data_short$DateTime <- paste(data_short$Date, data_short$Time)
 data_short$DateTime <- strptime(data_short$DateTime, "%d/%m/%Y %H:%M:%S")
 
 # create the graph and save as png
-png("plot3.png")
+png("plot3.png", bg = "transparent")
 with(data_short, plot(DateTime, Sub_metering_1, type = "l",
                       ylab = "Energy sub metering", xlab = ""))
 with(data_short, points(DateTime, Sub_metering_2, type = "l", col = "red"))
